@@ -1,0 +1,146 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+/*     border: 1px solid black;
+ */}
+
+body {
+    font-family: 'Roboto', sans-serif;    
+}
+
+
+.colour {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.wrapper .btnCopyColoures{
+    display: block;
+    position: absolute;
+    top: 5%;
+    border-radius: 3rem;
+    border: none;
+    opacity: 0.2;
+    font-size: 1.1rem;
+    padding: 0.2rem;
+    outline: none;
+    width: 90%;
+    cursor: pointer;
+}
+.wrapper .btnCopyColoures:hover{
+    position: absolute;
+    opacity: 0.5;
+    transform: scale(1.07);
+    transition: background 0.3s;
+}
+.wrapper .btnCopyColoures:active{
+    opacity: 0.65;
+    transform: scale(1);
+}
+
+.wrapper .container-colour {    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    cursor: copy;
+}
+
+.wrapper .colour .colourCode {
+    padding: 0.9rem;
+    font-size: 1.2rem;
+    color: #fff;    
+    border-radius: 10px;
+    transition: background 0.3s;
+    margin-top: 15%;
+}
+.wrapper .colour .colourCode:hover {
+    background: rgba(0, 0, 0, 0.15 );
+    cursor: pointer;
+    border-radius: 0.6rem;
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem;    
+}
+.wrapper .colour .colourCode:active {
+    opacity: 0.65;
+    transform: scale(0.97);
+}
+.wrapper .colour .colourCode:hover::after{
+    content: 'copy';
+    display: block;
+    text-align: end;
+    font-size: 0.9rem;
+    opacity: 0.5 ;
+}
+.container-colour .colour .fa-solid {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #fff;
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.9rem;
+    transition: background 0.3s;
+}
+.container-colour .colour .fa-solid:hover {
+    background: rgba(0, 0, 0, 0.15);
+    cursor: pointer;    
+    
+    position: relative;
+    float: left;    
+    
+    animation: 2s ease 0s normal none infinite swing;
+    transform-origin: center top;
+    animation:swing 1s infinite ease-in-out;
+    transform-origin:top;
+}
+@keyframes swing{
+    0%{-moz-transform:rotate(-15deg)}
+    50%{-moz-transform:rotate(15deg)}
+    100%{-moz-transform:rotate(-15deg)}
+}
+@keyframes swing{
+    0%{-webkit-transform:rotate(-15deg)}
+    50%{-webkit-transform:rotate(15deg)}
+    100%{-webkit-transform:rotate(-15deg)}    
+}
+
+.wrapper .btnColourChange{
+    display: block;
+    position: absolute;
+    border: none;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.0rem;
+    padding: 0.3rem;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    color: #ffffff8e;
+    background-color: #ffffff27;
+}
+.wrapper .btnColourChange:hover{
+    background-color: #ffffff69;
+    color: #ffffff;
+    font-weight: 600;
+}
+.wrapper .btnColourChange:active{
+    color: #ffffff;
+    background-color: #ffffff27;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper .colour .colourCode {
+        writing-mode: vertical-lr; 
+        text-orientation: upright;
+    }
+}
